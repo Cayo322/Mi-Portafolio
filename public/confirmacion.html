@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/conf.css">
+    <title>Confirmación de Envío</title>
+</head>
+<body>
+    <h1>¡Gracias por escribir, <span id="nombreUsuario"></span>!</h1>
+    <p>Pronto me pondré en contacto contigo.</p>
+    <!-- Puedes agregar más contenido o enlaces a otras páginas si lo deseas -->
+    
+    <script>
+        // JavaScript para obtener el nombre desde la URL
+        const params = new URLSearchParams(window.location.search);
+        const nombre = params.get('nombre');
+        
+        // Mostrar el nombre en el elemento con ID "nombreUsuario"
+        if (nombre) {
+            document.getElementById('nombreUsuario').textContent = nombre;
+        }
+    </script>
+</body>
+</html>
